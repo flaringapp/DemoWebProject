@@ -1,0 +1,102 @@
+* {
+	background: #191D30;
+	font-family: Asap, sans-serif;
+	padding: 0;
+	margin: 0;
+	animation-fill-mode: both;
+	animation-timing-function: ease-out:
+}
+
+.text_title {
+	background: darkorange;
+	padding:40px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
+	animation-name: anim_title;
+	animation-duration: 0.5s;
+}
+
+@keyframes anim_title {
+	from { transform: translate(0, -100%); }
+	to { transform: translate(0, 0%); }
+}
+
+.content {
+	margin: auto;
+	text-align: center;
+	animation-name: anim_content;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+}
+
+@keyframes anim_content {
+	from { opacity: 0.0; }
+	to { opacity: 1.0; }
+	 
+}
+
+.image_fire {
+	margin-top: 50px;
+	animation-name: anim_image;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+}
+
+@keyframes anim_image {
+	from { opacity: 0.0; }
+	to { opacity: 1.0; }
+}
+
+.text_quote {
+	color: white;
+	padding: 25px;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 35px;
+	animation-name: anim_text_quote;
+	animation-duration: 1s;
+	animation-delay: 1s;
+}
+
+@keyframes anim_text_quote {
+	from { opacity: 0.0; }
+	to { opacity: 1.0; }
+}
+
+.table_contacts {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	font-size: 15px;
+}
+
+.table_contacts, td {
+	padding: 5px 10px;
+	text-align: left;
+}
+
+.table_contanct_icon {
+	fill: white
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
