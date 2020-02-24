@@ -39,11 +39,24 @@
 	 
 }
 
+.logo {
+	display: flex;
+}
+
+.dynamic_logo_left {
+	flex: 25%;
+}
+
+.dynamic_logo_right {
+	flex: 25%;
+}
+
 .image_fire {
 	margin-top: 50px;
 	animation-name: anim_image;
 	animation-duration: 1s;
 	animation-delay: 0.5s;
+	flex: 50%;
 }
 
 @keyframes anim_image {
