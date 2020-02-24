@@ -37,6 +37,8 @@ function onSendFeedbackClicked() {
     };
 
     _sendFeedbackCell.appendChild(_buttonSendFeedback);
+
+ 	window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
 }
 
 function onSendFeedbackButtonClicked(input) {
