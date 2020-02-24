@@ -1,10 +1,13 @@
 * {
-	background: #191D30;
 	font-family: Asap, sans-serif;
 	padding: 0;
 	margin: 0;
 	animation-fill-mode: both;
-	animation-timing-function: ease-out:
+	animation-timing-function: ease-out;
+}
+
+body {
+	background: #191D30;
 }
 
 .text_title {
@@ -84,6 +87,39 @@
 	from { opacity: 0.0; }
 	to { opacity: 1.0; }
 }
+
+
+.google_play_container {
+	background: #FFAB40;
+	border-radius: 5px;
+	padding: 10px 20px;
+	text-decoration: none;
+  	transition: 0.3s;
+	display: inline-flex;
+	flex-direction: row;
+    align-items: center;
+}
+
+.google_play_container:hover {
+	background: #FF6D00;
+}
+
+.google_play_icon {
+	width: 40px;
+	height: 40px;
+}
+
+.google_play_text {
+	margin-left: 10px;
+	color: black;
+	font-size: 15px;
+}
+
+@keyframes anim_google_play {
+	from { opacity: 0.0; }
+	to { opacity: 1.0; }
+}
+
 
 .table_contacts {
 	margin-top: 25px;
