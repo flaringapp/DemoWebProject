@@ -41,10 +41,19 @@
 
 .logo {
 	display: flex;
+	align-items: flex-end;
 }
 
-.dynamic_logo {
+.dynamic_logo_left, .dynamic_logo_right {
 	flex: 25%;
+}
+
+.dynamic_logo_left {
+	text-align: right;
+}
+
+.dynamic_logo_right {
+	text-align: left;
 }
 
 .image_fire {
@@ -52,7 +61,7 @@
 	animation-name: anim_image;
 	animation-duration: 1s;
 	animation-delay: 0.5s;
-	flex: 50%;
+	flex: 1;
 }
 
 @keyframes anim_image {

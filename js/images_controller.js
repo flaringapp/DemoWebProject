@@ -26,7 +26,8 @@ function createImage() {
     var image = document.createElement('img');
     image.id = dynamicLogoImageId;
     image.src = imagePath;
-    image.animation = 'initial'
+    image.style.width = "100px";
+    image.style.height = "100px";
     return image;
 }
 
