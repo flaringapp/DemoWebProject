@@ -43,11 +43,7 @@
 	display: flex;
 }
 
-.dynamic_logo_left {
-	flex: 25%;
-}
-
-.dynamic_logo_right {
+.dynamic_logo {
 	flex: 25%;
 }
 
@@ -87,6 +83,7 @@
 	color: white;
 	font-size: 15px;
 	vertical-align: center;
+	border-width: 0;
 }
 
 .table_contacts td {
@@ -98,9 +95,24 @@
 	fill: white;
 }
 
-.table_contacts_feedback_text {
+.table_contacts_email {
+	color: white;
+}
+
+.feedback_container {
+	padding: 25px;
+}
+
+.feedback_label {
 	text-align: center;
 	color: darkorange;
+}
+
+#feedback_input_container {
+	margin-top: 10px;
+}
+#feedback_send_container {
+	margin-top: 10px;
 }
 
 

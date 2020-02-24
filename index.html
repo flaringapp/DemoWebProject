@@ -10,11 +10,11 @@
 			<div class="text_title">FlaringApp</div>
 			<div class="content">
 				<div class="logo">
-				<div class="dynamic_logo_left" id="dynamic_logo_left"/></div>
+					<div class="dynamic_logo_left" id="dynamic_logo_left"/></div>
 					<div class="image_fire">
 						<img src="images/fire.png" alt="Logo" onclick="toggleImages(this.form)">
 					</div>
-				<div class="dynamic_logo_right" id="dynamic_logo_right"/></div>
+					<div class="dynamic_logo_right" id="dynamic_logo_right"/></div>
 				</div>
 				<div class="text_quote">Let us flare up<br>best in your days</div>
 				<table class="table_contacts" align="center">
@@ -28,21 +28,18 @@
 						<td>
 							<img class="table_contacts_icon" src="images/ic_email.svg" alt="email">
 						</td>
-						<td>flaringapp@gmail.com</td>
-					</tr>
-					<tr>
-						<td colspan="2" style="text-align: center">
-							<a class="table_contacts_feedback_text" href="mailto:flaringapp@gmail.com?subject=Feedback">Send feedback</a>
+						<td>
+							<a class="table_contacts_email" href="mailto:flaringapp@gmail.com?subject=Feedback">flaringapp@gmail.com</a>
 						</td>
 					</tr>
-					<tr>
-						<td colspan="2" style="text-align: center" id="table_contacts_feedback_input_cell"></td>
-					</tr>
-					<tr>
-						<td colspan="2" style="text-align: center" id="table_contacts_feedback_send_cell"></td>
-					</tr>
 				</table>
+				<div class="feedback_container">
+					<u class="feedback_label" onclick="onSendFeedbackClicked(this.form)">Any feedback?</u>
+					<div id="feedback_input_container"></div>
+					<div id="feedback_send_container"></div>
+				</div>
 			</div>
 			<script type="text/javascript" src="js/images_controller.js" charset="UTF-8"></script>
+			<script type="text/javascript" src="js/feedback_controller.js" charset="UTF-8"></script>
 		</body>
 	</html>
