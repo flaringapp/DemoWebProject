@@ -38,9 +38,29 @@
 					</tr>
 				</table>
 				<div class="feedback_container">
-					<u class="feedback_label" onclick="onSendFeedbackClicked(this.form)">Any feedback?</u>
-					<div id="feedback_input_container"></div>
-					<div id="feedback_send_container"></div>
+					<u class="feedback_label" onclick="onFeedbackClicked(this.form)">Any feedback?</u>
+					<form class="feedback_form" id="feedback_form" action="/action_page.php">
+						<label class="feedback_form_label" for="fname">First name</label>
+						<br>
+						<input class="feedback_form_input" type="text" id="fname" name="fname">
+						<br>
+						<label class="feedback_form_label" for="lname">Last name</label>
+						<br>
+						<input class="feedback_form_input" type="text" id="lname" name="lname">
+						<br>
+						<label class="feedback_form_label" for="lemail">Email</label>
+						<br>
+						<input class="feedback_form_input" type="email" id="lemail" name="lemail">
+						<br>
+						<label class="feedback_form_label" for="lcomment">Comment</label>
+						<br>
+						<textarea class="feedback_form_input feedback_form_input_comment" id="lcomment" name="lcomment"></textarea>
+						<br>
+						<input class="feedback_form_input" type="checkbox" id="lreceivenews" name="lreceivenews">
+						<label class="feedback_form_label" for="lreceivenews">Receive news</label>
+						<br>
+						<input class="feedback_form_submit" type="submit" value="Submit">
+					</form>
 				</div>
 			</div>
 			<script type="text/javascript" src="js/images_controller.js" charset="UTF-8"></script>

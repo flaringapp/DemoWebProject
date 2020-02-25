@@ -148,16 +148,53 @@ body {
 	padding: 25px;
 }
 
+.feedback_form {
+	max-height: 0;
+	overflow: hidden;
+	color: white;
+	margin-top: 20px;
+	transition-duration: 0.5s
+}
+
 .feedback_label {
 	text-align: center;
 	color: darkorange;
 }
 
-#feedback_input_container {
-	margin-top: 10px;
+.feedback_form_label {
+	padding: 4px;
 }
-#feedback_send_container {
+
+.feedback_form_input {
+	border-radius: 4px;
+	padding: 4px;
+	margin: 8px;
+}
+
+.feedback_form_input_comment {
+	resize: none;
+	height: 5em;
+	width: 20em;
+}
+
+.feedback_form_submit {
+  	background: #FFAB40;
+  	text-decoration: none;
+  	border: none;
+  	border-radius: 5px;
+	padding: 10px 20px;
 	margin-top: 10px;
+
+	color: black;
+	font-size: 15px;
+
+	transition-duration: 0.3s;
+
+	cursor: pointer;
+}
+
+.feedback_form_submit:hover {
+	background: #FF6D00
 }
 
 
