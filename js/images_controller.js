@@ -1,3 +1,7 @@
+const staticLogo = document.getElementById("image_fire")
+const staticLogoIcon = document.getElementById("image_fire_icon")
+
+const staticLogoImage = document.getElementById("image_fire")
 const dynamicLogoLeft = document.getElementById("dynamic_logo_left");
 const dynamicLogoRight = document.getElementById("dynamic_logo_right");
 const dynamicLogos = [dynamicLogoLeft, dynamicLogoRight];
@@ -18,8 +22,23 @@ function toggleImages() {
     isImageCreated = !isImageCreated;
 }
 
+function onAddClick() {
+    addStaticImage();
+}
+
+function onRemoveClick() {
+    if (staticLogo.childElementCount > 1) {
+        staticLogo.removeChild(staticLogo.firstChild);
+    }
+}
+
 function addImages() {
     dynamicLogos.forEach(logo => logo.appendChild(createImage()));
+    addStaticImage();
+}
+
+function addStaticImage() {
+    staticLogo.insertBefore(createImage(), staticLogoIcon)
 }
 
 function createImage() {
@@ -37,4 +56,7 @@ function removeImages() {
             logo.removeChild(logo.firstChild);
         }
     });
+    while (staticLogo.childElementCount > 1) {
+        staticLogo.removeChild(staticLogo.firstChild);
+    }
 }
