@@ -42,26 +42,28 @@
 					<form class="feedback_form" id="feedback_form" action="/action_page.php">
 						<label class="feedback_form_label" for="fname">First name</label>
 						<br>
-						<input class="feedback_form_input" type="text" id="fname" name="fname">
+						<input class="feedback_form_input" type="text" id="fname" name="fname" required>
 						<br>
 						<label class="feedback_form_label" for="lname">Last name</label>
 						<br>
-						<input class="feedback_form_input" type="text" id="lname" name="lname">
+						<input class="feedback_form_input" type="text" id="lname" name="lname" required>
 						<br>
 						<label class="feedback_form_label" for="lemail">Email</label>
 						<br>
-						<input class="feedback_form_input" type="email" id="lemail" name="lemail">
+						<input class="feedback_form_input" type="email" id="lemail" name="lemail" required>
 						<br>
-						<label class="feedback_form_label" for="lcomment">Comment</label>
+						<label class="feedback_form_label" for="lgender">Gender</label>
 						<br>
-						<textarea class="feedback_form_input feedback_form_input_comment" id="lcomment" name="lcomment"></textarea>
-						<br>
-						<select name="feedback_form_gender" class="feedback_form_input feedback_form_input_select">
-							<option value="0" selected style="color: gray">Please select</option>
+						<select class="feedback_form_input feedback_form_input_select" id="lgender" name="lgender" required>
+							<option value="0" style="color: gray" selected disabled hidden>Please select</option>
 							<option value="1">Male</option>
 							<option value="2">Female</option>
 							<option value="3">Other</option>
 						</select>
+						<br>
+						<label class="feedback_form_label" for="lcomment">Comment</label>
+						<br>
+						<textarea class="feedback_form_input feedback_form_input_comment" id="lcomment" name="lcomment"></textarea>
 						<br>
 						<input class="feedback_form_input" type="checkbox" id="lreceivenews" name="lreceivenews">
 						<label class="feedback_form_label" for="lreceivenews">Receive news</label>
