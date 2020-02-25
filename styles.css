@@ -171,6 +171,13 @@ body {
 	margin: 8px;
 }
 
+.feedback_form_input_select {
+	height: 2em;
+  	border: none;
+  	border-radius: 5px;
+	padding: 4px 8px;
+}
+
 .feedback_form_input_comment {
 	resize: none;
 	height: 5em;
