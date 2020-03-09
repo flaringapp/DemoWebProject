@@ -171,11 +171,17 @@ body {
 	margin: 8px;
 }
 
-.feedback_form_input_select {
+.feedback_form_input_gender {
 	height: 2em;
   	border: none;
   	border-radius: 5px;
 	padding: 4px 8px;
+}
+
+.feedback_form_satisfied {
+	text-align: left;
+	display: inline-block;
+	border: 0;
 }
 
 .feedback_form_input_comment {
