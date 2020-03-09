@@ -75,7 +75,7 @@ function sendFeedbackData() {
         .map(k => esc(k) + '=' + esc(params[k]))
         .join('&');
 
-showMessage(query);
+    showMessage(query);
 }
 
 function showMessage(message) {
