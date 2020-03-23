@@ -294,7 +294,7 @@ body {
 
 	padding: 50px;
 
-	background: rgba(256, 256, 256, 0.1);
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .canvas {
@@ -302,6 +302,18 @@ body {
 	height: 500px;
 }
 
+
+/* Histogram */
+
+.histogram_container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	margin: 30px;
+
+	padding: 50px;
+}
 
 
 

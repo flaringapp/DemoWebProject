@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FlaringApp Canvas</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navigation_container">
+			<div class="navigation_home_container">
+				<img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
+			</div>
+			<span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
+			<span class="navigation_item" onclick="onHistogramClick(this.form)">Hisrogram</span>
+		</div>
+		<div class="histogram_container" id="histogram_container"></div>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/histogram/histogram_controller.js" charset="UTF-8"></script>
+	</body>
+</html>

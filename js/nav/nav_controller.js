@@ -1,6 +1,6 @@
 const HOME = "index.html";
 const CANVAS = "canvas.html";
-const HISTOGRAM = "histogram/histogram.html";
+const HISTOGRAM = "histogram.html";
 
 const SELF = "_self";
 
