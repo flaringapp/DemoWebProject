@@ -4,7 +4,7 @@ const BG_COLOR = "transparent";
 const BODY_COLOR = "#70D78C";
 const EYE_COLOR = "white"
 
-const TOTAL_SIZE = 125
+const TOTAL_SIZE = 80;
 
 const R = 40;
 
@@ -21,11 +21,9 @@ const EYE_X = R / 2.5;
 const EYE_Y = - R * 0.4; 
 const EYE_SIZE = 4;
 
-document.addEventListener("DOMContentLoaded", function() {
-    draw();
-});
+document.addEventListener("DOMContentLoaded", () => { draw(); });
 
-draw();
+window.addEventListener("resize", () => { draw(); });
 
 function draw() {
     var ctx = _canvas.getContext("2d");
@@ -43,6 +41,9 @@ function draw() {
     let scale = Math.min(ctx.canvas.width / TOTAL_SIZE, ctx.canvas.height / TOTAL_SIZE);
     ctx.scale(scale, scale);
 
+
+    ctx.translate(ctx.canvas.width / scale / 2 - TOTAL_SIZE / 2, R / 2);
+
 	ctx.fillStyle = BODY_COLOR;
 	ctx.lineCap = "butt";
 
@@ -58,8 +59,8 @@ function draw() {
 	ctx.fillStyle = EYE_COLOR;
 	ctx.lineWidth = 0;
 
-    drawLeftEye(ctx, cx, cy)
-    drawRightEye(ctx, cx, cy)
+    drawLeftEye(ctx, cx, cy);
+    drawRightEye(ctx, cx, cy);
 }
 
 function drawBg(ctx) {
