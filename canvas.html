@@ -7,12 +7,16 @@
 	</head>
 	<body>
 		<div class="navigation_container">
-			<div class=" navigation_home_container">
+			<div class="navigation_home_container">
 				<img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
 			</div>
 			<span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
 			<span class="navigation_item" onclick="onHistogramClick(this.form)">Hisrogram</span>
 		</div>
+		<div class="canvas_container">
+			<canvas class="canvas" id="canvas">
+		</div>
 		<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/canvas/canvas_drawer.js" charset="UTF-8"></script>
 	</body>
 </html>
