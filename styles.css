@@ -10,11 +10,6 @@ body {
 	background: #191D30;
 }
 
-@keyframes anim_navigation {
-	from { transform: translate(0, -100%); }
-	to { transform: translate(0, 0%); }
-}
-
 .navigation_container {
 	background: darkorange;
 	border-bottom-left-radius: 50px;
@@ -32,11 +27,38 @@ body {
 	animation-duration: 0.5s;
 }
 
-.navigation_home {
-	width: 64px;
-	height: 64px;
+@keyframes anim_navigation {
+	from { transform: translate(0, -100%); }
+	to { transform: translate(0, 0%); }
+}
 
-	margin-right: 25px;
+.navigation_home_container {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100px;
+	height: 100px;
+
+	margin-right: 10px;
+}
+
+.navigation_home {
+	background: transparent;
+	border-radius: 50%;
+
+	width: 60px;
+	height: 60px;
+
+	padding: 20px;
+
+	transition: 0.2s;
+}
+.navigation_home:hover {
+	background: #bc5704;
+	padding: 10px;
+	width: 65px;
+	height: 65px;
 }
 
 .navigation_item {
@@ -46,8 +68,8 @@ body {
 
 	background: transparent;
 	border-radius: 20px;
-	padding: 20px 25px;
 
+	padding: 20px 25px;
 	margin: 10px;
 
 	min-height: 45px;
