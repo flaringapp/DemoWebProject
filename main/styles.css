@@ -10,22 +10,60 @@ body {
 	background: #191D30;
 }
 
-.text_title {
+@keyframes anim_navigation {
+	from { transform: translate(0, -100%); }
+	to { transform: translate(0, 0%); }
+}
+
+.navigation_container {
 	background: darkorange;
-	padding:40px;
 	border-bottom-left-radius: 50px;
 	border-bottom-right-radius: 50px;
-	color: white;
-	font-size: 50px;
-	text-align: center;
-	font-weight: bold;
-	animation-name: anim_title;
+
+	padding: 0px 50px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+
+	animation-name: anim_navigation;
 	animation-duration: 0.5s;
 }
 
-@keyframes anim_title {
-	from { transform: translate(0, -100%); }
-	to { transform: translate(0, 0%); }
+.navigation_home {
+	width: 64px;
+	height: 64px;
+
+	margin-right: 25px;
+}
+
+.navigation_item {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	background: transparent;
+	border-radius: 20px;
+	padding: 20px 25px;
+
+	margin: 10px;
+
+	min-height: 45px;
+
+	color: lightgoldenrodyellow;
+	font-size: 25px;
+
+	transition: 0.2s;
+}
+
+.navigation_item:hover {
+	background: #bc5704;
+	font-size: 35px;
+	padding: 10px 15px;
+	margin: 20px 20px;
+	color: wheat;
 }
 
 .content {
@@ -39,7 +77,14 @@ body {
 @keyframes anim_content {
 	from { opacity: 0.0; }
 	to { opacity: 1.0; }
-	 
+}
+
+.header_text {
+	color: white;
+	font-size: 60px;
+	text-align: center;
+	font-weight: bold;
+	padding: 30px 50px 15px 50px;
 }
 
 .logo {
