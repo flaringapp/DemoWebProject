@@ -1,98 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Flaringapp</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div class="navigation_container">
-			<div class=" navigation_home_container">
-				<img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
-			</div>
-			<span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
-			<span class="navigation_item" onclick="onHistogramClick(this.form)">Hisrogram</span>
+
+<head>
+	<title>FlaringApp</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="navigation_container">
+		<div class=" navigation_home_container">
+			<img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
 		</div>
-		<div class="content">
-			<h1 class="header_text">FlaringApp</h1>
-			<div class="logo">
-				<div class="dynamic_logo_left" id="dynamic_logo_left"/></div>
-				<div class="image_fire">
-					<img src="images/fire.png" alt="Logo" onclick="toggleImages(this.form)">
-				</div>
-				<div class="dynamic_logo_right" id="dynamic_logo_right"/></div>
-			</div>
-			<div class="text_quote">Let us flare up<br>best in your days</div>
-			<a class="google_play_container" href="https://play.google.com/store/apps/developer?id=Flaring+App" target="_blank">
-				<img class="google_play_icon" src="images/ic_google_play.svg" alt="Google Play">
-				<div class="google_play_text">Find us on Google Play</div>
-			</a>
-			<table class="table_contacts" align="center">
-				<tr>
-					<td>
-						<img class="table_contacts_icon" src="images/ic_phone.svg" alt="Phone">
-					</td>
-					<td>+380999999999</td>
-				</tr>
-				<tr>
-					<td>
-						<img class="table_contacts_icon" src="images/ic_email.svg" alt="email">
-					</td>
-					<td>
-						<a class="table_contacts_email" href="mailto:flaringapp@gmail.com?subject=Feedback">flaringapp@gmail.com</a>
-					</td>
-				</tr>
-			</table>
-			<div class="feedback_container">
-				<u class="feedback_label" onclick="onFeedbackClicked(this.form)">Any feedback?</u>
-				<form class="feedback_form" id="feedback_form" action="javascript:sendFeedbackData()">
-					<label class="feedback_form_label" for="feedback_input_name">First name</label>
-					<br>
-					<input class="feedback_form_input" type="text" id="feedback_input_name" name="feedback_input_name" required>
-					<br>
-					<label class="feedback_form_label" for="feedback_input_surname">Last name</label>
-					<br>
-					<input class="feedback_form_input" type="text" id="feedback_input_surname" name="feedback_input_surname" required>
-					<br>
-					<label class="feedback_form_label" for="feedback_input_email">Email</label>
-					<br>
-					<input class="feedback_form_input" type="email" id="feedback_input_email" name="feedback_input_email" required>
-					<br>
-					<label class="feedback_form_label" for="feedback_input_gender">Gender</label>
-					<br>
-					<select class="feedback_form_input feedback_form_input_gender" id="feedback_input_gender" name="feedback_input_gender" required>
-						<option value="0" style="color: gray" selected disabled hidden>Please select</option>
-						<option value="1">Male</option>
-						<option value="2">Female</option>
-						<option value="3">Other</option>
-					</select>
-					<br>
-					<br>
-					<fieldset class="feedback_form_satisfied">
-						<label class="feedback_form_label">Satisfied?</label>
-						<br>
-						<br>
-						<input type="radio" id="feedback_input_satisfied_yes" name="feedback_satisfied" value="feedback_satisfied_yes">
-						<label for="feedback_input_satisfied_yes">Yes</label>
-						&nbsp
-						<input type="radio" id="feedback_input_satisfied_no" name="feedback_satisfied" value="feedback_satisfied_no">
-						<label for="feedback_input_satisfied_no">No</label>
-					</fieldset>
-					<br>
-					<br>
-					<label class="feedback_form_label" for="feedback_input_comment">Comment</label>
-					<br>
-					<textarea class="feedback_form_input feedback_form_input_comment" id="feedback_input_comment" name="feedback_input_comment"></textarea>
-					<br>
-					<input class="feedback_form_input" type="checkbox" id="feedback_receive_news" name="feedback_receive_news" checked="true">
-					<label class="feedback_form_label" for="feedback_receive_news">Receive news</label>
-					<br>
-					<button class="feedback_form_submit" onclick="onFeedbackSubmit(this.form)">Submit</button>
-				</form>
-			</div>
+		<span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
+		<span class="navigation_item" onclick="onHistogramClick(this.form)">Hisrogram</span>
+		<span class="navigation_item" onclick="onContactsClick(this.form)">Contacts</span>
+		<span class="navigation_item" onclick="onFeedbackClick(this.form)">Feedback</span>
+	</div>
+	<div class="content">
+		<h1 class="header_text">FlaringApp</h1>
+		<div class="logo">
+			<div class="dynamic_logo_left" id="dynamic_logo_left" />
 		</div>
-		<script type="text/javascript" src="js/main/images_controller.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="js/main/feedback_controller.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
-	</body>
+		<div class="image_fire">
+			<img src="images/fire.png" alt="Logo" onclick="toggleImages(this.form)">
+		</div>
+		<div class="dynamic_logo_right" id="dynamic_logo_right" />
+	</div>
+	</div>
+	<div class="text_quote">Let us flare up<br>best in your days</div>
+	<a class="google_play_container" href="https://play.google.com/store/apps/developer?id=Flaring+App" target="_blank">
+		<img class="google_play_icon" src="images/ic_google_play.svg" alt="Google Play">
+		<div class="google_play_text">Find us on Google Play</div>
+	</a>
+	</div>
+	<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/main/images_controller.js" charset="UTF-8"></script>
+</body>
+
 </html>
