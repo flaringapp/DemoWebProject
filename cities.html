@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaringApp Cities</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="navigation_container">
+    <div class=" navigation_home_container">
+        <img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
+    </div>
+    <span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
+    <span class="navigation_item" onclick="onHistogramClick(this.form)">Histogram</span>
+    <span class="navigation_item" onclick="onContactsClick(this.form)">Contacts</span>
+    <span class="navigation_item" onclick="onFeedbackClick(this.form)">Feedback</span>
+    <span class="navigation_item" onclick="onCitiesClick(this.form)">Cities</span>
+</div>
+<div class="cities_container">
+    <div class="cities_input_container">
+        <form class="cities_input_form" method="post"
+              action="http://127.0.0.1:8080/php/cities/cities.php">
+            <label for="input_cities" class="title_input_cities">Get descriptions of cities</label>
+            <textarea id="input_cities" placeholder="Input cities here" required></textarea>
+
+            <div class="container_cities_sort">
+                <label for="input_cities_sort" class="message_input_cities">Sort?</label>
+                <input type="checkbox" id="input_cities_sort">
+            </div>
+
+            <button class="button_submit_cities" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="cities_table_container">
+        <table class="cities_table">
+            <tr>
+                <th>City</th>
+                <th>Description</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/cities/cities_controller.js" charset="UTF-8"></script>
+</body>
+</html>

@@ -2,78 +2,89 @@
 <html>
 
 <head>
-  <title>FlaringApp Feedback</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>FlaringApp Feedback</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="navigation_container">
+<div class="navigation_container">
     <div class=" navigation_home_container">
-      <img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
+        <img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
     </div>
     <span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
-    <span class="navigation_item" onclick="onHistogramClick(this.form)">Hisrogram</span>
+    <span class="navigation_item" onclick="onHistogramClick(this.form)">Histogram</span>
     <span class="navigation_item" onclick="onContactsClick(this.form)">Contacts</span>
     <span class="navigation_item" onclick="onFeedbackClick(this.form)">Feedback</span>
-  </div>
+    <span class="navigation_item" onclick="onCitiesClick(this.form)">Cities</span>
+</div>
 
-  <div class="feedback_title_container">
+<div class="feedback_title_container">
     <h4>Please leave a small</h4>
     <h1>Feedback</h1>
     <h2>to help us become better</h2>
-  </div>
+</div>
 
-  <div class="feedback_container">
-    <form class="feedback_form" id="feedback_form" action="javascript:sendFeedbackData()">
-      <label class="feedback_form_label" for="feedback_input_name">First name</label>
-      <br>
-      <input class="feedback_form_input" type="text" id="feedback_input_name" name="feedback_input_name" required>
-      <br>
-      <label class="feedback_form_label" for="feedback_input_surname">Last name</label>
-      <br>
-      <input class="feedback_form_input" type="text" id="feedback_input_surname" name="feedback_input_surname" required>
-      <br>
-      <label class="feedback_form_label" for="feedback_input_email">Email</label>
-      <br>
-      <input class="feedback_form_input" type="email" id="feedback_input_email" name="feedback_input_email" required>
-      <br>
-      <label class="feedback_form_label" for="feedback_input_gender">Gender</label>
-      <br>
-      <select class="feedback_form_input feedback_form_input_gender" id="feedback_input_gender" name="feedback_input_gender" required>
-        <option value="0" style="color: gray" selected disabled hidden>Please select</option>
-        <option value="1">Male</option>
-        <option value="2">Female</option>
-        <option value="3">Other</option>
-      </select>
-      <br>
-      <br>
-      <fieldset class="feedback_form_satisfied">
-        <label class="feedback_form_label">Satisfied?</label>
+<div class="feedback_container">
+    <form class="feedback_form" id="feedback_form" method="post"
+          action="http://127.0.0.1:8080/php/feedback/feedback.php">
+        <label class="feedback_form_label" for="feedback_input_name">First name</label>
+        <br>
+        <input class="feedback_form_input" type="text" id="feedback_input_name"
+               name="feedback_input_name" required>
+        <br>
+        <label class="feedback_form_label" for="feedback_input_surname">Last name</label>
+        <br>
+        <input class="feedback_form_input" type="text" id="feedback_input_surname"
+               name="feedback_input_surname" required>
+        <br>
+        <label class="feedback_form_label" for="feedback_input_email">Email</label>
+        <br>
+        <input class="feedback_form_input" type="email" id="feedback_input_email"
+               name="feedback_input_email" required>
+        <br>
+        <label class="feedback_form_label" for="feedback_input_gender">Gender</label>
+        <br>
+        <select class="feedback_form_input feedback_form_input_gender" id="feedback_input_gender"
+                name="feedback_input_gender" required>
+            <option value="0" style="color: gray" selected disabled hidden>Please select</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+        </select>
         <br>
         <br>
-        <input type="radio" id="feedback_input_satisfied_yes" name="feedback_satisfied" value="feedback_satisfied_yes">
-        <label for="feedback_input_satisfied_yes">Yes</label>
-        &nbsp
-        <input type="radio" id="feedback_input_satisfied_no" name="feedback_satisfied" value="feedback_satisfied_no">
-        <label for="feedback_input_satisfied_no">No</label>
-      </fieldset>
-      <br>
-      <br>
-      <label class="feedback_form_label" for="feedback_input_comment">Comment</label>
-      <br>
-      <textarea class="feedback_form_input feedback_form_input_comment" id="feedback_input_comment" name="feedback_input_comment"></textarea>
-      <br>
-      <input class="feedback_form_input" type="checkbox" id="feedback_receive_news" name="feedback_receive_news" checked="true">
-      <label class="feedback_form_label" for="feedback_receive_news">Receive news</label>
-      <br>
-      <button class="feedback_form_submit" onclick="onFeedbackSubmit(this.form)">Submit</button>
+        <fieldset class="feedback_form_satisfied">
+            <label class="feedback_form_label">Satisfied?</label>
+            <br>
+            <br>
+            <input type="radio" id="feedback_input_satisfied_yes" name="feedback_satisfied"
+                   value="feedback_satisfied_yes">
+            <label for="feedback_input_satisfied_yes">Yes</label>
+            &nbsp
+            <input type="radio" id="feedback_input_satisfied_no" name="feedback_satisfied"
+                   value="feedback_satisfied_no">
+            <label for="feedback_input_satisfied_no">No</label>
+        </fieldset>
+        <br>
+        <br>
+        <label class="feedback_form_label" for="feedback_input_comment">Comment</label>
+        <br>
+        <textarea class="feedback_form_input feedback_form_input_comment"
+                  id="feedback_input_comment" name="feedback_input_comment"></textarea>
+        <br>
+        <input class="feedback_form_input" type="checkbox" id="feedback_receive_news"
+               name="feedback_receive_news" checked>
+        <label class="feedback_form_label" for="feedback_receive_news">Receive news</label>
+        <br>
+        <button class="feedback_form_submit">Submit</button>
     </form>
     <br>
-  </div>
-  <script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
-  <script type="text/javascript" src="js/feedback/feedback_controller.js" charset="UTF-8"></script>
+</div>
+<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/feedback/feedback_controller.js" charset="UTF-8"></script>
 </body>
 
 </html>

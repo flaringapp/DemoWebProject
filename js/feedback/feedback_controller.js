@@ -9,84 +9,80 @@ const _feedbackSatisfiedNo = document.getElementById("feedback_input_satisfied_n
 const _feedbackComment = document.getElementById("feedback_input_comment");
 const _feedbackReceiveNews = document.getElementById("feedback_receive_news");
 
-const inputFeedbackId = "input_feedback"
-const sendFeedbackButtonId = "button_send_feedback"
+const inputFeedbackId = "input_feedback";
+const sendFeedbackButtonId = "button_send_feedback";
 
-let isInputShown = false
+$(document).ready(() => {
+    $("#feedback_form").on("submit", (e) => {
+        e.preventDefault();
+        onFeedbackSubmit();
+    })
+});
 
 $(".feedback_form_submit").hover(
-  (e) => {
-    $(e.target).css('background', '#FF6D00');
-  },
-  (e) => {
-    $(e.target).css('background', '#FFAB40');
-  }
+    (e) => {
+        $(e.target).css('background', '#FF6D00');
+    },
+    (e) => {
+        $(e.target).css('background', '#FFAB40');
+    }
 );
 
 function onFeedbackSubmit() {
-  var name = _feedbackName.value;
-  if (name.trim().length == 0) {
-    showMessage("Please enter your name");
-    return;
-  }
+    let name = _feedbackName.value;
+    if (name.trim().length === 0) {
+        showMessage("Please enter your name");
+        return;
+    }
 
-  var surname = _feedbackSurname.value;
-  if (surname.trim().length == 0) {
-    showMessage("Please enter your surname");
-    return;
-  }
+    let surname = _feedbackSurname.value;
+    if (surname.trim().length === 0) {
+        showMessage("Please enter your surname");
+        return;
+    }
 
-  var email = _feedbackEmail.value;
-  if (email.trim().length == 0) {
-    showMessage("Please enter your email");
-    return;
-  }
+    let email = _feedbackEmail.value;
+    if (email.trim().length === 0) {
+        showMessage("Please enter your email");
+        return;
+    }
 
-  var gender = _feedbackGender.value;
-  if (gender == 0) {
-    showMessage("Please select gender");
-    return;
-  }
+    let gender = _feedbackGender.value;
+    if (gender === 0) {
+        showMessage("Please select gender");
+        return;
+    }
 
-  if (!_feedbackSatisfiedNo.checked && !_feedbackSatisfiedYes.checked) {
-    showMessage("Please tell us if you are satisfied");
-    return;
-  }
-  var isSatisfied = _feedbackSatisfiedYes.checked;
+    if (!_feedbackSatisfiedNo.checked && !_feedbackSatisfiedYes.checked) {
+        showMessage("Please tell us if you are satisfied");
+        return;
+    }
 
-  var comment = _feedbackComment.value;
-  var receiveNews = _feedbackReceiveNews.checked;
+    sendFeedbackData();
 }
 
 function sendFeedbackData() {
-  let json = createJson();
-
-  $.post("http://httpbin.org/post", json)
-    .done((data) => {
-      displayThanks();
+    let form = $("#feedback_form");
+    let url = form.attr('action');
+    console.log(url);
+    $.ajax({
+        url: url,
+        type: form.attr('method'),
+        data: form.serialize(),
+        success: (data) => {
+            displayMessage(data["message"]);
+        },
     });
 }
 
-function createJson() {
-  var json = {};
-  json["name"] = _feedbackName.value;
-  json["surname"] = _feedbackSurname.value;
-  json["email"] = _feedbackEmail.value;
-  json["gender"] = _feedbackGender.value;
-  json["satisfied"] = _feedbackSatisfiedYes.checked;
-  json["receive_news"] = _feedbackReceiveNews.checked;
-  json["comment"] = _feedbackComment.value;
-  return json;
-}
+function displayMessage(message) {
+    $(".feedback_container").append("<h1 id='thanks'>" + message + "</h1>");
 
-function displayThanks() {
-  $(".feedback_container").append("<h1 id='thanks'>Thanks!</h1>");
-
-  let el = $("#thanks").last();
-  el.css('color', 'white');
-  el.css('text-align', 'center');
+    let el = $("#thanks").last();
+    el.css('color', 'white');
+    el.css('text-align', 'center');
 }
 
 function showMessage(message) {
-  window.alert(message);
+    window.alert(message);
 }

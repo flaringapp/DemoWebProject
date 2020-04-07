@@ -3,6 +3,7 @@ const CANVAS = "canvas.html";
 const HISTOGRAM = "histogram.html";
 const CONTACTS = "contacts.html";
 const FEEDBACK = "feedback.html";
+const CITIES = "cities.html";
 
 const SELF = "_self";
 
@@ -24,4 +25,8 @@ function onContactsClick() {
 
 function onFeedbackClick() {
 	window.open(FEEDBACK, SELF);
+}
+
+function onCitiesClick() {
+	window.open(CITIES, SELF);
 }

@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>FlaringApp</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap" rel="stylesheet">
+    <title>FlaringApp</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap"
+          rel="stylesheet">
 </head>
-
 <body>
-	<div class="navigation_container">
-		<div class=" navigation_home_container">
-			<img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
-		</div>
-		<span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
-		<span class="navigation_item" onclick="onHistogramClick(this.form)">Hisrogram</span>
-		<span class="navigation_item" onclick="onContactsClick(this.form)">Contacts</span>
-		<span class="navigation_item" onclick="onFeedbackClick(this.form)">Feedback</span>
-	</div>
-	<div class="content">
-		<h1 class="header_text">FlaringApp</h1>
-		<div class="logo">
-			<div class="dynamic_logo_left" id="dynamic_logo_left" />
-		</div>
-		<div class="image_fire">
-			<img src="images/fire.png" alt="Logo" onclick="toggleImages(this.form)">
-		</div>
-		<div class="dynamic_logo_right" id="dynamic_logo_right" />
-	</div>
-	</div>
-	<div class="text_quote">Let us flare up<br>best in your days</div>
-	<a class="google_play_container" href="https://play.google.com/store/apps/developer?id=Flaring+App" target="_blank">
-		<img class="google_play_icon" src="images/ic_google_play.svg" alt="Google Play">
-		<div class="google_play_text">Find us on Google Play</div>
-	</a>
-	</div>
-	<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
-	<script type="text/javascript" src="js/main/images_controller.js" charset="UTF-8"></script>
+<div class="navigation_container">
+    <div class=" navigation_home_container">
+        <img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
+    </div>
+    <span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
+    <span class="navigation_item" onclick="onHistogramClick(this.form)">Histogram</span>
+    <span class="navigation_item" onclick="onContactsClick(this.form)">Contacts</span>
+    <span class="navigation_item" onclick="onFeedbackClick(this.form)">Feedback</span>
+    <span class="navigation_item" onclick="onCitiesClick(this.form)">Cities</span>
+</div>
+<div class="content">
+    <h1 class="header_text">FlaringApp</h1>
+    <div class="logo">
+        <div class="dynamic_logo_left" id="dynamic_logo_left"></div>
+        <div class="image_fire">
+            <img src="images/fire.png" alt="Logo" onclick="toggleImages(this.form)">
+        </div>
+        <div class="dynamic_logo_right" id="dynamic_logo_right"></div>
+    </div>
+    <div class="text_quote">Let us flare up<br>best in your days</div>
+    <a class="google_play_container"
+       href="https://play.google.com/store/apps/developer?id=Flaring+App"
+       target="_blank">
+        <img class="google_play_icon" src="images/ic_google_play.svg" alt="Google Play">
+        <div class="google_play_text">Find us on Google Play</div>
+    </a>
+</div>
+<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/main/images_controller.js" charset="UTF-8"></script>
 </body>
 
 </html>

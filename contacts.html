@@ -2,63 +2,66 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>FlaringApp Contacts</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap" rel="stylesheet">
-  <script rel="stylesheet" href="assets/jquery/jquery-3.4.1.dev.js"></script>
-  <link rel="stylesheet" href="assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-  <script rel="stylesheet" href="assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+    <title>FlaringApp Contacts</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script rel="stylesheet" href="assets/jquery/jquery-3.4.1.dev.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script rel="stylesheet" href="assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="navigation_container">
+<div class="navigation_container">
     <div class=" navigation_home_container">
-      <img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
+        <img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
     </div>
     <span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
-    <span class="navigation_item" onclick="onHistogramClick(this.form)">Hisrogram</span>
+    <span class="navigation_item" onclick="onHistogramClick(this.form)">Histogram</span>
     <span class="navigation_item" onclick="onContactsClick(this.form)">Contacts</span>
     <span class="navigation_item" onclick="onFeedbackClick(this.form)">Feedback</span>
-  </div>
-  <div class="container">
-    <table class="table_contacts table table-borderless" align="center">
-      <thead>
+    <span class="navigation_item" onclick="onCitiesClick(this.form)">Cities</span>
+</div>
+<div class="container">
+    <table class="table_contacts table table-borderless">
+        <thead>
         <tr>
-          <th style="width:50px"></th>
-          <th></th>
+            <th style="width:50px"></th>
+            <th></th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         <tr>
-          <td>
-            <img class="table_contacts_icon" src="images/ic_phone.svg" alt="Phone">
-          </td>
-          <td>
-              <a class="table_contacts_email" href="tel:+380999999999>">+380999999999</a>
-          </td>
+            <td>
+                <img class="table_contacts_icon" src="images/ic_phone.svg" alt="Phone">
+            </td>
+            <td>
+                <a class="table_contacts_email" href="tel:+380999999999>">+380999999999</a>
+            </td>
         </tr>
         <tr>
-          <td>
-            <img class="table_contacts_icon" src="images/ic_email.svg" alt="email">
-          </td>
-          <td>
-            <a class="table_contacts_email" href="mailto:flaringapp@gmail.com?subject=Feedback">flaringapp@gmail.com</a>
-          </td>
+            <td>
+                <img class="table_contacts_icon" src="images/ic_email.svg" alt="email">
+            </td>
+            <td>
+                <a class="table_contacts_email" href="mailto:flaringapp@gmail.com?subject=Feedback">flaringapp@gmail.com</a>
+            </td>
         </tr>
-      </tbody>
+        </tbody>
     </table>
     <h1 class="title_call_back">Any questions? We'll call back</h1>
     <form class="form-inline mt-4">
-      <div class="form-group mr-sm-3 mb-2">
-        <label for="inputPhone" class="sr-only">Password</label>
-        <input type="tel" class="form-control" id="inputPhone" placeholder="Phone number" pattern="[+]{1}[0-9]{11,14}" required>
-      </div>
-      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        <div class="form-group mr-sm-3 mb-2">
+            <label for="inputPhone" class="sr-only">Password</label>
+            <input type="tel" class="form-control" id="inputPhone" placeholder="Phone number"
+                   pattern="[+]{1}[0-9]{11,14}" required>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
     </form>
-  </div>
-  <script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+</div>
+<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
 </body>
 
 </html>

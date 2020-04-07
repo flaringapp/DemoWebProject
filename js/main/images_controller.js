@@ -2,7 +2,7 @@ const dynamicLogoLeft = document.getElementById("dynamic_logo_left");
 const dynamicLogoRight = document.getElementById("dynamic_logo_right");
 const dynamicLogos = [dynamicLogoLeft, dynamicLogoRight];
 
-const dynamicLogoImageId = "dynamic_logo_image"
+const dynamicLogoImageId = "dynamic_logo_image";
 
 const imagePath = "images/fire.png";
 
@@ -12,7 +12,7 @@ function toggleImages() {
     if (isImageCreated) {
         removeImages();
     } else {
-        addImages();
+        addImages()
     }
 
     isImageCreated = !isImageCreated;
