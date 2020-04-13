@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaringApp Students</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600,700&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="navigation_container">
+    <div class=" navigation_home_container">
+        <img class="navigation_home" src="images/nav_fire.png" onclick="onHomeClick(this.form)">
+    </div>
+    <span class="navigation_item" onclick="onCanvasClick(this.form)">Canvas</span>
+    <span class="navigation_item" onclick="onHistogramClick(this.form)">Histogram</span>
+    <span class="navigation_item" onclick="onContactsClick(this.form)">Contacts</span>
+    <span class="navigation_item" onclick="onFeedbackClick(this.form)">Feedback</span>
+    <span class="navigation_item" onclick="onCitiesClick(this.form)">Cities</span>
+    <span class="navigation_item" onclick="onStudentsClick(this.form)">Students</span>
+</div>
+<div class="students_container">
+    <div class="students_actions_container">
+        <button class="button_students_action" id="button_set_students_marks">Set student's marks</button>
+        <button class="button_students_action" id="button_view_students_marks">View student's marks</button>
+    </div>
+    <form class="form_students" id="form_set_student_marks" method="post" action="http://127.0.0.1:8080/php/students/students_set.php">
+        <label class="students_form_title">Set student's marks</label>
+        <label class="students_form_label" for="input_set_marks_student_surname">Enter student surname</label>
+        <input type="text" class="students_form_input_surname" id="input_set_marks_student_surname" required>
+        <label class="students_form_label" for="input_set_marks_student_marks">Enter student marks</label>
+        <input type="text" class="students_form_input_surname" id="input_set_marks_student_marks" required>
+        <button type="submit" class="students_form_submit">Set</button>
+    </form>
+    <form class="form_students" id="form_view_student_marks" method="get" action="http://127.0.0.1:8080/php/students/students_view.php">
+        <label class="students_form_title">View student's marks</label>
+        <label class="students_form_label" for="input_view_marks_student_surname">Enter student surname</label>
+        <input type="text" class="students_form_input_surname" id="input_view_marks_student_surname" required>
+        <button type="submit" class="students_form_submit">View</button>
+    </form>
+</div>
+<script type="text/javascript" src="js/nav/nav_controller.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/students/students_controller.js" charset="UTF-8"></script>
+</body>
+</html>

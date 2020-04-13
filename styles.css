@@ -418,3 +418,78 @@ body {
     border: 1px solid gray;
     padding: 10px;
 }
+
+/* Students */
+.students_container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.students_actions_container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.button_students_action {
+    background: #FFAB40;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    color: black;
+    font-size: 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.button_students_action:hover {
+    background: #FF6D00;
+}
+
+.students_form_title {
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+}
+
+.students_form_label {
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+}
+
+.students_form_input_surname {
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.students_form_submit {
+    background: #FFAB40;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: black;
+    font-size: 15px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.students_form_submit:hover {
+    background: #FF6D00;
+}
+
+.form_students {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}

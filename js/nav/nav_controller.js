@@ -4,6 +4,7 @@ const HISTOGRAM = "histogram.html";
 const CONTACTS = "contacts.html";
 const FEEDBACK = "feedback.html";
 const CITIES = "cities.html";
+const STUDENTS = "students.html";
 
 const SELF = "_self";
 
@@ -29,4 +30,8 @@ function onFeedbackClick() {
 
 function onCitiesClick() {
 	window.open(CITIES, SELF);
+}
+
+function onStudentsClick() {
+	window.open(STUDENTS, SELF);
 }
