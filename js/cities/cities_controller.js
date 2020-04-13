@@ -38,7 +38,7 @@ function sendCitiesToServer(cities, sort) {
         type: form.attr('method'),
         data: JSON.stringify(json),
         success: (data) => {
-            displayCities(data)
+            displayCities(JSON.parse(data));
         }
     });
 }
@@ -51,12 +51,12 @@ function displayCities(data) {
 
     table.find("tr:gt(0)").remove();
 
-    $.each(data, (key, value) => {
+    $.each(data, function(i, obj) {
         let row = document.createElement("TR");
         let cityCell = document.createElement("TD");
-        cityCell.innerHTML = key;
+        cityCell.innerHTML = obj["name"];
         let descriptionCell = document.createElement("TD");
-        descriptionCell.innerHTML = value;
+        descriptionCell.innerHTML = obj["description"];
         row.append(cityCell);
         row.append(descriptionCell);
         table.append(row);

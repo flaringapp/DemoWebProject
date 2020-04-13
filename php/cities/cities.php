@@ -1,16 +1,9 @@
 <?php
 
 $path = $_SERVER['DOCUMENT_ROOT'];
-include $path."/php/utils/Utils.php";
+include $path . "/php/utils/Utils.php";
 
-header('Content-type: application/json');
-
-$citiesArray = array(
-    'lviv' => 'Description Lviv',
-    'kyiv' => 'Description Kyiv',
-    'odessa' => 'Description Odessa',
-    'zapo' => 'Description Zapo',
-);
+include_once $path . "/php/db/db_connector.php";
 
 validatePost();
 
@@ -22,19 +15,38 @@ $data = $_POST;
 $citiesData = $data["cities"];
 $sort = $data["sort"] ?: false;
 
-$response = array();
+$cities = array();
 
 for ($i = 0; $i < count($citiesData); $i++) {
     $city = $citiesData[$i];
-    if (array_key_exists(strtolower($city), $citiesArray)) {
-        $response[$city] = $citiesArray[strtolower($city)];
+    $description = getDBCityDescription($conn, $city);
+    if ($description) {
+        $cities[$city] = $description;
     } else {
-        $response[$city] = "No description";
+        $cities[$city] = "No description";
     }
 }
 
 if ($sort) {
-    ksort($response);
+    ksort($cities);
 }
 
+$response = array();
+
+foreach ($cities as $city => $description) {
+    $obj = array();
+    $obj["name"] = $city;
+    $obj["description"] = $description;
+    $response[$city] = $obj;
+}
+
+$response = array_values($response);
+
 echo json_encode($response);
+
+function getDBCityDescription($conn, $city)
+{
+    $result = mysqli_query($conn, "SELECT description FROM cities WHERE name=\"$city\"");
+    if ($result->field_count === 0) return false;
+    return $result->fetch_assoc()["description"];
+}
